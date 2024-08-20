@@ -1,0 +1,88 @@
+{
+  "utilisateurs": [
+    {
+      "nomUtilisateur": "esmes",
+      "mailUtilisateur": "lili@gmail.com",
+      "motDePasse": "filime",
+      "motDePasseConfirmation": "filime",
+      "id": 1
+    },
+    {
+      "nomUtilisateur": "esmes",
+      "mailUtilisateur": "lili@gmail.com",
+      "motDePasse": "filime",
+      "motDePasseConfirmation": "filime",
+      "id": 2
+    },
+    {
+      "nomUtilisateur": "linda",
+      "mailUtilisateur": "lindas@gmail.com",
+      "motDePasse": "filime",
+      "motDePasseConfirmation": "filime",
+      "id": 3
+    },
+    {
+      "nomUtilisateur": "lindasgfh",
+      "mailUtilisateur": "linda@g",
+      "motDePasse": "filine",
+      "motDePasseConfirmation": "filine",
+      "id": 4
+    },
+    {
+      "nomUtilisateur": "lindasgfh",
+      "mailUtilisateur": "linda@g",
+      "motDePasse": "filine",
+      "motDePasseConfirmation": "filine",
+      "id": 5
+    },
+    {
+      "nomUtilisateur": "lindasgfh",
+      "mailUtilisateur": "linda@g",
+      "motDePasse": "filine",
+      "motDePasseConfirmation": "filine",
+      "id": 6
+    },
+    {
+      "nomUtilisateur": "lindasgfh",
+      "mailUtilisateur": "linda@g",
+      "motDePasse": "filine",
+      "motDePasseConfirmation": "filine",
+      "id": 7
+    },
+    {
+      "nomUtilisateur": "lindasgfh",
+      "mailUtilisateur": "linda@g",
+      "motDePasse": "filine",
+      "motDePasseConfirmation": "filine",
+      "id": 8
+    },
+    {
+      "nomUtilisateur": "loraine",
+      "mailUtilisateur": "loraine@gmail.com",
+      "motDePasse": "loraine",
+      "motDePasseConfirmation": "loraine",
+      "id": 9
+    }
+  ],
+  "publications": [
+    {
+      "textePublication": "Bonjour tout le monde",
+      "imagePublication": "https://img.freepik.com/photos-premium/plein-coup-fille-apprenant-mathematiques-ecole_23-2150470852.jpg?w=996",
+      "idUtilisateur": 1,
+      "datePublication": "2024-08-19T15:08:30.297Z",
+      "likePublication": 0,
+      "auteur": "esmes",
+      "id": 1
+    },
+    {
+      "textePublication": "hello everyone",
+      "imagePublication": "https://img.freepik.com/photos-premium/plein-coup-fille-apprenant-mathematiques-ecole_23-2150470852.jpg?w=996",
+      "idUtilisateur": 1,
+      "datePublication": "2024-08-19T15:13:58.443Z",
+      "likePublication": 0,
+      "auteur": "esmes",
+      "id": 2
+    }
+    
+  ]
+}
