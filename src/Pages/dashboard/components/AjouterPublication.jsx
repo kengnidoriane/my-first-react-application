@@ -1,5 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Stack, TextField, Button } from '@mui/material'
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useForm } from "react-hook-form"
 import {toast} from 'react-hot-toast'
 import axios from 'axios';
@@ -19,6 +20,25 @@ export default function AjouterPublication() {
         formState: { errors },
       } = useForm();
 
+      const useQuery = useQueryClient();
+       // fonction mutation
+
+       const mutation = useMutation({
+        mutationFn: (pub) => {
+          return axios.post('http://localhost:3000/publications', pub)
+        },
+        onError: (error) => {
+            toast.error(`Une erreur est survenue :${error.message}`)
+        },
+        onSuccess: () => {
+            // reset est utilise pour supprimer les donnees entre
+            reset();
+            // usequery est utilise pour recharge de nouvelles donnees sur la page
+            useQuery.invalidateQueries('publications')
+            toast.success('publication ajoutee avec success')
+        }
+      })
+
       const onSubmit = (data) => {
         //  la constante publication est faite pour attribuer les di
         const publication = {
@@ -27,18 +47,8 @@ export default function AjouterPublication() {
             datePublication: new Date(),
             likePublication: 0,
             auteur: user.nomUtilisateur,
-        }
-        
-        axios.post('http://localhost:3000/publications', publication).then((res) =>{
-            console.log(data);
-            toast.success('publication ajouter');
-            reset();
-            
-        }).catch((err) =>{
-            console.log(err);
-            toast.error('Une erreur est survenue')
-            
-        })
+        };
+        mutation.mutate(publication);
       }
   return (
     <div>
@@ -65,9 +75,9 @@ export default function AjouterPublication() {
                             minLength:{
                                 value:10,
                                 message: 'Veuillez saisir un texte de plus de 5 carateres'
-                            }
+                            },
                         })}/>
-                    
+                     {errors.textePublication && <span>{errors.textePublication.message}</span>} {/* Affichage de l'erreur */}
                     <TextField 
                     id="filled-basic"
                     label="Saisir l'url de votre image" 
@@ -79,12 +89,12 @@ export default function AjouterPublication() {
                         required: 'Veuillez saisir une url',
                         
                     })}/>
-                    <Button variant='contained' type='submit'>Publier</Button>
+                    <Button variant='contained' type='submit'>
+                        Publier
+                    </Button>
                 </Stack>
-            
-
             </form>
         </Stack>
     </div>
-  )
+  );
 }

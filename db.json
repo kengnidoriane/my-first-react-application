@@ -62,6 +62,13 @@
       "motDePasse": "loraine",
       "motDePasseConfirmation": "loraine",
       "id": 9
+    },
+    {
+      "nomUtilisateur": "annabele",
+      "mailUtilisateur": "anna@gmail.com",
+      "motDePasse": "lindas",
+      "motDePasseConfirmation": "lindas",
+      "id": 10
     }
   ],
   "publications": [
@@ -75,14 +82,22 @@
       "id": 1
     },
     {
-      "textePublication": "hello everyone",
-      "imagePublication": "https://img.freepik.com/photos-premium/plein-coup-fille-apprenant-mathematiques-ecole_23-2150470852.jpg?w=996",
+      "textePublication": "et bam fadscx",
+      "imagePublication": "https://img.freepik.com/photos-gratuite/verre-biere-diverses-collations-table_141793-16628.jpg?t=st=1724232343~exp=1724235943~hmac=076f3eb0c4d47d9e79977b8c4b4bb52cb0731078d9d50b161b7bff4adb2f60ec&w=740",
       "idUtilisateur": 1,
-      "datePublication": "2024-08-19T15:13:58.443Z",
+      "datePublication": "2024-08-21T09:28:35.487Z",
       "likePublication": 0,
       "auteur": "esmes",
-      "id": 2
+      "id": 5
+    },
+    {
+      "textePublication": "Voici une de mes futures maisons",
+      "imagePublication": "https://img.freepik.com/photos-gratuite/3d-voiture-electrique-batiment_23-2148972401.jpg?t=st=1724232681~exp=1724236281~hmac=ec7b13f1d56936322f18089ef2bae84f8ae5fba2585ac8a0c3184daa99be1b02&w=996",
+      "idUtilisateur": 1,
+      "datePublication": "2024-08-21T09:31:47.661Z",
+      "likePublication": 0,
+      "auteur": "esmes",
+      "id": 6
     }
-    
   ]
 }

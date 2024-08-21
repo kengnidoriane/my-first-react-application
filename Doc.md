@@ -16,7 +16,7 @@ Assurez-vous que les endpoints que vous essayez d'atteindre par exemple,<http://
 
 ## Tantasks query
 
-TanStack Query optimise les performances en regroupant les requêtes similaires et en évitant les appels redondants. Cela nous permet a notre appli d'etre plus performant
-il faut donc l'installer avec npm i @tanstack/react-query
-on install egalement devtools avec npm i @tanstack/react-query-devtools
-on importe donc le useQueryClien et useQuery dans le main.jsx de l'application et on met le Query
+    TanStack Query optimise les performances en regroupant les requêtes similaires et en évitant les appels redondants. Cela nous permet a notre appli d'etre plus performant
+    il faut donc l'installer avec npm i @tanstack/react-query
+    on install egalement devtools avec npm i @tanstack/react-query-devtools
+    on importe donc le useQueryClien et useQuery dans le main.jsx de l'application et on met query.[EOF]

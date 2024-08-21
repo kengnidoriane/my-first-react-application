@@ -1,10 +1,9 @@
-import React from 'react'
+// import React from 'react'
 import { Box, Stack, Typography, TextField, Button } from '@mui/material'
 import { useForm } from "react-hook-form"
 import {toast} from 'react-hot-toast'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import Dashboard from '../dashboard/Dashboard'
 
 
 export default function Inscription() {
@@ -74,11 +73,15 @@ export default function Inscription() {
                             {...register("nomUtilisateur", { required: 'Veuillez saisir un nom', minLength:{
                                 value: 5, message: 'Veuillez saisir un nom de plus de 5 caracteres'
                             } })}/>
+
+                            {errors.nomUtilisateur && <span>{errors.nomUtilisateur.message}</span>} {/* Affichage de l'erreur */}
+
                             <TextField id="outlined-basic" label="Veuillez saisir votre adresse mail" variant="outlined" 
                             fullWidth size='small' type='email'
-                                {...register("mailUtilisateur", { required: 'Veuillez saisir un nom', pattern: "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*\.\w{2,3}$/" })}/> 
+                                {...register("mailUtilisateur", { required: 'Veuillez saisir un nom', pattern: {   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: 'Adresse e-mail invalide',} })}/> 
 
-                   
+                            {errors.mailUtilisateur && <span>{errors.mailUtilisateur.message}</span>} {/* Affichage de l'erreur */}
 
                      <TextField id="outlined-basic" type='password' label="Veuillez saisir un mot de passe" variant="outlined" 
                      fullWidth size='small'

@@ -1,6 +1,5 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './Pages/dashboard/Dashboard.jsx';
 import Connexion from './Pages/connexion/Connexion.jsx';
@@ -28,13 +27,14 @@ const router = createBrowserRouter([
   },
 ])
 
+console.log(router);
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
       <Toaster/>
       <RouterProvider router={router}></RouterProvider>
-    </QueryClientProvider>
-      
-
-  </StrictMode>,
+    </QueryClientProvider>    
+  </StrictMode>
 )
